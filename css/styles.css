@@ -71,6 +71,7 @@ img {
 }
 
 /* Header For Mobile */
+
 .header {
   border-bottom: 1px solid var(--light-accent-color);
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
@@ -141,14 +142,14 @@ img {
   .email {
     margin-bottom: 12px;
   }
+
   .logo {
-    margin-right: 120px;
+    margin-right: 76px;
   }
 
   .navigation {
     display: flex;
     align-items: center;
-    margin-right: 120px;
   }
 
   .nav-item {
@@ -183,11 +184,15 @@ img {
     color: var(--active);
   }
 
-  .list.nav {
-    display: flex;
+  .list {
+    list-style: none;
+    display: block;
+    justify-content: center;
   }
-  .list.address {
+  .address {
+    font-style: normal;
     display: flex;
+    flex-direction: column;
     margin-left: auto;
   }
 
@@ -195,20 +200,26 @@ img {
     margin-right: 40px;
   }
 
-  .menu-container {
-    display: block;
-  }
-  .address.link {
-    font-size: 12px;
-    font-style: normal;
-    line-height: 1.16px;
-    letter-spacing: 0.02em;
-    color: var(--text-color);
-    transition: color var(--transition);
+  .menu-tab {
+    display: flex;
+    gap: 40px;
   }
 
-  .address-item:first-child {
-    margin-bottom: 12px;
+  @media screen and (min-width: 768px) {
+    .address-item:first-child {
+      margin-bottom: 12px;
+    }
+
+    .address-item {
+      margin-bottom: 12px;
+    }
+
+    .address {
+      font-style: normal;
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+    }
   }
 
   .address.link:hover,
@@ -273,24 +284,25 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    padding: 24px 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: #434455;
   }
   .link {
     text-decoration: none;
-    display: inline-block;
+    /* display: inline-block; */
   }
   .list.address {
     display: flex;
     margin-left: auto;
   }
 
-  .address-item:not(:last-child) {
+  /* .address-item:not(:last-child) {
     margin-right: 40px;
-  }
+  } */
 
-  .address.link {
+  .addresss {
     font-style: normal;
     font-size: 16px;
     line-height: 1.5;
@@ -363,6 +375,12 @@ img {
   flex-direction: column;
   justify-content: space-between;
   overflow-y: scroll;
+}
+
+@media screen and (min-width: 320px) {
+  .mob-menu-address-item.phone {
+    white-space: nowrap;
+  }
 }
 
 @media screen and (min-width: 428px) {
@@ -445,6 +463,10 @@ img {
 @media screen and (max-width: 767px) {
   .mob-menu-address-item.phone {
     font-size: 36px;
+  }
+  .mob-social-link:hover,
+  .mob-social-link:focus {
+    background-color: var(--active);
   }
 }
 
